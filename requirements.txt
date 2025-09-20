@@ -22,7 +22,7 @@ gast==0.4.0
 flatbuffers==25.2.10
 astunparse==1.6.3
 absl-py==2.2.2
--rotobuf==6.30.2
+protobuf==6.30.2
 xgboost==3.0.0
 wikipedia==1.4.0
 wheel==0.45.1
