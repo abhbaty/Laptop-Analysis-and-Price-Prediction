@@ -102,7 +102,6 @@ pyarrow==20.0.0
 py-cpuinfo==9.0.0
 pure-eval==0.2.3
 psutil==7.0.0
-protobuf==4.25.8
 prophet==1.1.6
 prompt-toolkit==3.0.51
 prometheus-client==0.21.1
@@ -212,5 +211,6 @@ argon2-cffi-bindings==21.2.0
 anyio==4.9.0
 annotated-types==0.7.0
 altair==5.5.0
+
 
 
