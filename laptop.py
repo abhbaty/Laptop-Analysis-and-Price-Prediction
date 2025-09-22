@@ -304,7 +304,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style="text-align: center; color: #6c757d; padding: 20px;">
-        <p>Laptop Price Prediction App © 2026 | Powered by Machine Learning</p>
+        <p>Laptop Price Prediction App © 2026 | Powered by Ahmed Bhbaty</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -332,5 +332,6 @@ st.markdown("""
     });
 </script>
 """, unsafe_allow_html=True)
+
 
 
