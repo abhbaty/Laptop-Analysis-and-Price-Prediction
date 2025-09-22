@@ -33,7 +33,7 @@ The dataset consists of **1303 laptop entries**, each described by **12 key feat
 - `Price` – Target variable  
 
 
-## 💻 Exploratory Data Analysis (EDA)  
+## ⚡ Exploratory Data Analysis (EDA)  
 - **Price Distribution**: Skewed, normalized using log transformation.  
 - **Key Drivers**:  
   - Apple & MSI laptops are premium.  
@@ -41,14 +41,14 @@ The dataset consists of **1303 laptop entries**, each described by **12 key feat
   - Mac OS devices command higher prices than Windows/Linux.  
 
 
-## 💻 Feature Engineering  
+## ⚡ Feature Engineering  
 - **Screen Features**: Touchscreen, IPS Panel, Resolution (X & Y), PPI.  
 - **CPU Grouping**: Intel i3/i5/i7, Other Intel, AMD.  
 - **Memory Features**: Split into HDD, SSD, Hybrid, Flash.  
 - **GPU & OS Grouping**: Nvidia, Intel, AMD; Windows, Mac, Others.  
 
 
-## 💻 Modeling  
+## ⚡ Modeling  
 Machine learning models applied:  
 - Linear Regression  
 - K-Nearest Neighbors (KNN)  
@@ -56,19 +56,19 @@ Machine learning models applied:
 - Decision Tree  
 - Random Forest  
 
-### 💻 Best Model: Random Forest  
+### ⚡ Best Model: Random Forest  
 - **R² Score:** 0.82  
 - Strong predictive accuracy on unseen data.  
 - Key Features: RAM, SSD, CPU brand, GPU brand, and PPI.  
 
 
-## 💻 Business Applications  
+## ⚡ Business Applications  
 - **For Manufacturers**: Optimize pricing strategies & production planning.  
 - **For Retailers**: Dynamic pricing and inventory management.  
 - **For Consumers**: Identify fair laptop prices and make better purchase decisions.  
 
 
-## 💻 Deployment  
+## ⚡ Deployment  
 The project includes:  
 - **Jupyter Notebook** for full analysis.  
 - **Streamlit App** for interactive price prediction.  
@@ -78,7 +78,7 @@ The project includes:
 ❤️ **Files Used**: [Laptop Analysis and Price Prediction](https://github.com/abhbaty/Laptop-Analysis-and-Price-Prediction)  
 
 
-## 💻 Future Enhancements  
+## ⚡ Future Enhancements  
 - Handle extreme outliers more effectively.  
 - Periodic retraining with new laptop models & specifications.  
 - Extend prediction system to other electronic devices.  
