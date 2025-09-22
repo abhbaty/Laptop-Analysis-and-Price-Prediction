@@ -1,4 +1,4 @@
-#  Laptop Analysis and Price Prediction  
+# Laptop Analysis and Price Prediction  
 
 ## 💻 Project Overview  
 Laptop prices vary significantly due to factors like brand reputation, specifications, and market dynamics. This project leverages **machine learning** to analyze laptop specifications and predict their prices accurately.  
@@ -74,6 +74,7 @@ The project includes:
 - **Streamlit App** for interactive price prediction.  
 - **GitHub Repository** with preprocessing, model training, and evaluation.  
 
+💜 **Live App**: [Try the Streamlit App](https://abhbaty-laptop-analysis-and-price-prediction-laptop-mxkaw0.streamlit.app/)  
 ❤️ **Presentation Link**: [View Project Presentation](https://1drv.ms/p/c/6bbfef19ea5efc48/EUrEJk6WpyhGtWXTFWTDyckBrGT0FYqX0kBNTE3JNSS44Q?e=tDZog3)  
 ❤️ **Files Used**: [Laptop Analysis and Price Prediction](https://github.com/abhbaty/Laptop-Analysis-and-Price-Prediction)  
 
