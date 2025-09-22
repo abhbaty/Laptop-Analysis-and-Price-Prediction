@@ -8,7 +8,7 @@ The goal is to:
 - Assist **retailers** in setting competitive prices.  
 - Provide **market insights** into key features driving laptop pricing.  
 
----
+
 
 ## 🎯 Objectives  
 - Perform **Exploratory Data Analysis (EDA)** to uncover pricing patterns.  
@@ -43,7 +43,7 @@ The dataset consists of **1303 laptop entries**, each described by **12 key feat
   - Gaming & Workstation laptops are most expensive.  
   - Mac OS devices command higher prices than Windows/Linux.  
 
----
+
 
 ## ⚙️ Feature Engineering  
 - **Screen Features**: Touchscreen, IPS Panel, Resolution (X & Y), PPI.  
@@ -51,7 +51,7 @@ The dataset consists of **1303 laptop entries**, each described by **12 key feat
 - **Memory Features**: Split into HDD, SSD, Hybrid, Flash.  
 - **GPU & OS Grouping**: Nvidia, Intel, AMD; Windows, Mac, Others.  
 
----
+
 
 ## 📈 Modeling  
 Machine learning models applied:  
@@ -84,16 +84,13 @@ The project includes:
 🔗 **Presentation Link**: [View Project Presentation](./P1.pptx)  
 🔗 **GitHub Repository**: [Laptop Analysis and Price Prediction](https://github.com/abhbaty/Laptop-Analysis-and-Price-Prediction)  
 
----
+
 
 ## 📌 Future Enhancements  
 - Handle extreme outliers more effectively.  
 - Periodic retraining with new laptop models & specifications.  
 - Extend prediction system to other electronic devices.  
 
----
 
-## 👨‍💻 Author  
-**Ahmed Bhbaty**  
-- [LinkedIn](https://www.linkedin.com/in/ahmed-elbhbaty/)  
-- [GitHub](https://github.com/ahmedelbhbaty)  
+
+
