@@ -7,14 +7,17 @@ import json
 import requests
 import time
 
+
 # تحسين الأداء عن طريق التخزين المؤقت للنموذج
 @st.cache_resource
 def load_model():
     return joblib.load('laptop_random_forest_model.pkl')
 
+
 @st.cache_resource
 def load_scaler():
     return joblib.load('laptop_scaler.pkl')
+
 
 # تهيئة الصفحة
 st.set_page_config(
@@ -24,11 +27,13 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+
 # تحميل النموذج والمقياس
 model = load_model()
 scaler = load_scaler()
 
-# إضافة أنيميشن للخلفية
+
+# إضافة أنيميشن للخلفية مع ألوان بنفسجية
 st.markdown("""
 <style>
     /* أنيميشن للخلفية */
@@ -56,13 +61,13 @@ st.markdown("""
         backface-visibility: hidden;
         position: absolute;
         animation: move;
-        animation-duration: 45;
+        animation-duration: 45s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
     
     .background span:nth-child(1) {
-        color: #179d62;
+        color: #6a0dad;
         top: 15%;
         left: 72%;
         animation-duration: 36s;
@@ -72,7 +77,7 @@ st.markdown("""
     }
     
     .background span:nth-child(2) {
-        color: #2C3E50;
+        color: #4b0082;
         top: 80%;
         left: 32%;
         animation-duration: 42s;
@@ -82,7 +87,7 @@ st.markdown("""
     }
     
     .background span:nth-child(3) {
-        color: #E8EAED;
+        color: #c58cff;
         top: 32%;
         left: 12%;
         animation-duration: 38s;
@@ -102,7 +107,7 @@ st.markdown("""
         box-shadow: 0 6px 18px rgba(20,20,20,0.16);
         min-width: 240px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-left: 4px solid #179d62;
+        border-left: 4px solid #6a0dad;
         z-index: 999;
         margin-bottom: 20px;
     }
@@ -130,6 +135,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+
 # إضافة أنيميشن الخلفية
 st.markdown("""
 <div class="background">
@@ -139,20 +145,23 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+
 # Logo or image
 st.image("logo.png", width=120)  # Replace with your desired image file
+
 
 # Title
 col_title1, col_title2, col_title3 = st.columns([1, 2, 1])
 with col_title2:
     st.markdown(
         """
-        <h1 style="text-align:center; color:#2C3E50; font-family:Arial; margin-bottom:10px;">
+        <h1 style="text-align:center; color:#4b0082; font-family:Arial; margin-bottom:10px;">
             Laptop Price Prediction App
         </h1>
         """,
         unsafe_allow_html=True
     )
+
 
 # --- Dropdown options ---
 company_options = ['Dell', 'HP', 'Apple', 'Asus', 'Lenovo', 'Acer']
@@ -160,6 +169,7 @@ typename_options = ['Notebook', 'Ultrabook', 'Gaming', '2 in 1', 'Netbook']
 cpu_options = ['Intel', 'AMD', 'Other']
 gpu_options = ['Nvidia', 'AMD', 'Intel', 'Other']
 os_options = ['Windows', 'MacOS', 'Linux', 'Others']
+
 
 # Resolution choices
 resolutions = {
@@ -170,10 +180,13 @@ resolutions = {
     "3840x2160": (3840, 2160)
 }
 
+
 inch_options = [13.3, 14, 15.6, 17.3]
+
 
 # --- Split page into two columns, inputs get 2/3, price gets 1/3 ---
 col1, col2 = st.columns([2, 1])
+
 
 with col1:
     # --- User inputs ---
@@ -201,6 +214,7 @@ with col1:
             weight_options = {"1.0 – 1.5 kg": 1.3, "1.6 – 2.5 kg": 2.0, "2.6 – 3.5 kg": 3.0}
         Weight = weight_options[st.selectbox('Weight', list(weight_options.keys()), key='weight')]
 
+
     # Storage
     st.markdown("#### Storage Configuration")
     col_storage1, col_storage2 = st.columns(2)
@@ -209,8 +223,10 @@ with col1:
     with col_storage2:
         SSD = st.selectbox('SSD (GB)', [128, 256, 512, 1024, 2000], key='ssd')
 
+
     # Touchscreen toggle
     Touchscreen = 1 if st.checkbox("Touchscreen", key='touch') else 0
+
 
     # Resolution & Inches
     st.markdown("#### Display Specifications")
@@ -223,12 +239,14 @@ with col1:
     X_res, Y_res = resolutions[res_choice]
     ppi = math.sqrt(X_res**2 + Y_res**2) / inch_choice
 
+
     # --- Encoding ---
     company_map = {name: idx for idx, name in enumerate(company_options)}
     typename_map = {name: idx for idx, name in enumerate(typename_options)}
     cpu_map = {name: idx for idx, name in enumerate(cpu_options)}
     gpu_map = {name: idx for idx, name in enumerate(gpu_options)}
     os_map = {name: idx for idx, name in enumerate(os_options)}
+
 
     # إنشاء DataFrame للإدخال
     input_dict = {
@@ -246,18 +264,21 @@ with col1:
         'os': [os_map[os_val]]
     }
 
+
     input_df = pd.DataFrame(input_dict)
     input_scaled = scaler.transform(input_df)
 
+
     # التنبؤ بالسعر
     price_prediction = model.predict(input_scaled)
+
 
 with col2:
     # بطاقة السعر العائمة
     st.markdown(
         f"""
         <div class="floating-card">
-            <h2 style="color:#179d62; font-family:Arial; margin-bottom:18px;">
+            <h2 style="color:#6a0dad; font-family:Arial; margin-bottom:18px;">
                 Predicted Price
             </h2>
             <h1 style="color:#313638; font-size:2.2em; font-weight:bold; margin:0;">
@@ -277,6 +298,7 @@ with col2:
     Actual prices may vary based on market conditions and additional features.
     """)
 
+
 # إضافة تذييل الصفحة
 st.markdown("---")
 st.markdown(
@@ -287,6 +309,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # تحميل وتنفيذ JavaScript لتحسين الأداء
 st.markdown("""
