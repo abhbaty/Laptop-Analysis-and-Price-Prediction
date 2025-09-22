@@ -1,4 +1,4 @@
-# 💻 Laptop Analysis and Price Prediction  
+#  Laptop Analysis and Price Prediction  
 
 ## 💻 Project Overview  
 Laptop prices vary significantly due to factors like brand reputation, specifications, and market dynamics. This project leverages **machine learning** to analyze laptop specifications and predict their prices accurately.  
