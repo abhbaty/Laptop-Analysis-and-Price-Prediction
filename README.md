@@ -75,7 +75,7 @@ The project includes:
 - **GitHub Repository** with preprocessing, model training, and evaluation.  
 
 ❤️ **Presentation Link**: [View Project Presentation](./P1.pptx)  
-❤️ **Files Used**: [Laptop Analysis and Price Prediction](https://github.com/abhbaty/Laptop-Analysis-and-Price-Prediction)  
+❤️ **Files Used**: [Laptop Analysis and Price Prediction]([https://github.com/abhbaty/Laptop-Analysis-and-Price-Prediction](https://1drv.ms/p/c/6bbfef19ea5efc48/EUrEJk6WpyhGtWXTFWTDyckBrGT0FYqX0kBNTE3JNSS44Q?e=tDZog3))  
 
 
 ## ⚡ Future Enhancements  
