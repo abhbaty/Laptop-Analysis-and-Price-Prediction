@@ -285,7 +285,7 @@ with col2:
                 💶{price_prediction[0]:,.2f}
             </h1>
             <div style="color:#34495E; margin-top:-6px; font-size:1.13em;">
-                Unit Price
+                Price Unit
             </div>
         </div>
         """,
@@ -332,4 +332,5 @@ st.markdown("""
     });
 </script>
 """, unsafe_allow_html=True)
+
 
