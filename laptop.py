@@ -282,10 +282,10 @@ with col2:
                 Predicted Price
             </h2>
             <h1 style="color:#313638; font-size:2.2em; font-weight:bold; margin:0;">
-                ${price_prediction[0]:,.2f}
+                💶{price_prediction[0]:,.2f}
             </h1>
             <div style="color:#34495E; margin-top:-6px; font-size:1.13em;">
-                USD
+                Unit Price
             </div>
         </div>
         """,
@@ -304,7 +304,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style="text-align: center; color: #6c757d; padding: 20px;">
-        <p>Laptop Price Prediction App © 2023 | Powered by Machine Learning</p>
+        <p>Laptop Price Prediction App © 2026 | Powered by Machine Learning</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -332,3 +332,4 @@ st.markdown("""
     });
 </script>
 """, unsafe_allow_html=True)
+
