@@ -17,7 +17,6 @@ The goal is to:
 - Identify the most influential factors affecting laptop prices.  
 - Build a predictive system with strong generalization performance.  
 
----
 
 ## 📊 Dataset  
 The dataset consists of **1303 laptop entries**, each described by **12 key features**:  
@@ -34,7 +33,7 @@ The dataset consists of **1303 laptop entries**, each described by **12 key feat
 - `Weight` – Laptop weight (kg)  
 - `Price` – Target variable  
 
----
+
 
 ## 🔎 Exploratory Data Analysis (EDA)  
 - **Price Distribution**: Skewed, normalized using log transformation.  
@@ -66,7 +65,7 @@ Machine learning models applied:
 - Strong predictive accuracy on unseen data.  
 - Key Features: RAM, SSD, CPU brand, GPU brand, and PPI.  
 
----
+
 
 ## 🚀 Business Applications  
 - **For Manufacturers**: Optimize pricing strategies & production planning.  
